@@ -6,7 +6,7 @@ See [SurviveJS - React](http://survivejs.com/react/introduction/) for the book.
 
 1. `npm i` - Install dependencies.
 2. `npm start` - Run development build.
-3. Open a browser on http://localhost:port
+3. Open a browser on http://localhost:8080
 
 ## Advanced Commands
 
