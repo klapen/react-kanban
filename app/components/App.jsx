@@ -7,9 +7,9 @@ const notes = [
     {id: uuid.v4(),task: 'Do laundry'}
 ];
 
-const new_note = [
-    {id: uuid.v4(), task: 'New task'}
-];
+function new_note(){
+    return [{id: uuid.v4(), task: 'New task'}];
+}
 
 class App extends React.Component{
     constructor(props){
@@ -21,13 +21,13 @@ class App extends React.Component{
         const {notes} = this.state;
         return (
             <div>
-		<button onClick={this.addNote}>+</button>
+		<button className="add-note" onClick={this.addNote}>+</button>
 		<Notes notes={notes} onNoteClick={this.activateNoteEdit} onEdit={this.editNote} onDelete={this.deleteNote} />
             </div>
         );
     }
     addNote = () => {
-        this.setState({notes: this.state.notes.concat(new_note)});
+        this.setState({notes: this.state.notes.concat(new_note())});
     }
     deleteNote = (id,e) => {
 	e.stopPropagation();
